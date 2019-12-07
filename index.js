@@ -15,8 +15,8 @@ const main = require('./routes/main')
 
 //load routes
 const auth = require('./routes/auth')
-
 const profile = require('./routes/profile')
+const petProfile = require('./routes/petProfile')
 
 //load keys
 const keys = require('./keys')
@@ -80,6 +80,8 @@ app.use((req,res, next)=>{
 app.use('/', main)
 app.use('/auth', auth)
 app.use('/profile', profile)
+app.use('/petProfile', petProfile)
+
 
 //static images
 app.use(express.static('public'))
