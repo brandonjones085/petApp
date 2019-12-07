@@ -9,6 +9,7 @@ const bodyParser = require("body-parser")
 //users models
 require('./models/users')
 require("./models/profile")
+require('./models/reminder')
 
 
 const main = require('./routes/main')
@@ -17,6 +18,7 @@ const main = require('./routes/main')
 const auth = require('./routes/auth')
 const profile = require('./routes/profile')
 const petProfile = require('./routes/petProfile')
+const reminder = require('./routes/reminder')
 
 //load keys
 const keys = require('./keys')
@@ -81,6 +83,7 @@ app.use('/', main)
 app.use('/auth', auth)
 app.use('/profile', profile)
 app.use('/petProfile', petProfile)
+app.use('/reminder', reminder)
 
 
 //static images
